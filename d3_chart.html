@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Global Dashboard></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat%7CPaytone+One&display=swap" rel="stylesheet" />
+    <script src="d3_chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link href='d3_chart.css' rel="stylesheet" type='text/css'>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script data-require="d3@3.5.3" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
+</head>
+</head>
+
+<body onload="readEntries()">
+    <main>
+        <img src='dw-logo.png' id='symbol' class='upperimages' alt='lol'>
+        <h1 class='upperimages'>Global Dashboard</h1>
+        <div class = "all">
+            <div class="sub">
+                <div>Dingus</div>
+                <div>Widget</div>
+                <div>Sales</div>
+            </div>
+        </div>
+        <br/>
+        <div class = "all">
+            <div class = "sub">
+                <div id='st1'>0</div>
+                <div id='st2'>0</div>
+                <div id='st3'>$
+                    <samp id='st4' class = "all">0.00</samp>
+                </div>
+                
+            </div>
+        </div> 
+    <hr/>
+
+    <div id="block_container">
+
+        <div id="barbar"></div>
+
+        <div id="my_dataviz"></div>  
+    
+    </div>
+
+
+  
+
+    <hr/>
+
+    <table id='mytable'>
+        <caption>Order History</caption>
+        <col class= 'lightgrey'>
+        <col span="4">
+        <thead>
+            <tr>
+                <th rowspan="2"> ID#</th>
+                <th rowspan="2">Date</th>
+                <th colspan="2">Quantity</th>
+                <th rowspan="2">Total</th>
+            </tr>
+            <tr>
+                <th>Dingus</th>
+                <th>Widget</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+        </tbody>
+        
+        <tfoot>
+            <tr>
+            <td colspan = '5'>©2020 D&W Worldwide.</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+    <section>
+        <details>
+            <summary>Order Form</summary>
+            <hr/>
+            <form class='pure-form'>
+
+                <label for="Dingus">Dingus</label>
+                 <input type="text" id="Dingus" value="0" onchange="lala()">
+                @ <input type='text' value = '14.25' disabled>
+                = $ <input type='text' value =0.00 disabled id='DingusTotal'>
+                <br>
+
+                <label for="Widget">Widget</label>
+                 <input type="text" id="Widget" value="0" onchange = 'lalala()'>
+                @ <input type='text' value = '9.99' disabled>
+                = $ <input type='text' value =0.00 disabled id = 'WidgetTotal'>
+                <br>
+
+
+                <label for="Total">Total $</label>  
+                <input type='text' id='Total' value = 0.00 disabled>
+                <br>
+
+                <button class="button-error pure-button" onclick="clearr()" type = button>Cancel</button>
+
+                <button class="button-success pure-button" onclick="update()" disabled id='Order' type = button>Order</button>
+
+            </form>
+    
+        </details>
+        </section>
+
+    </main>
+</body>
+</html>
